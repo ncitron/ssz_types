@@ -1,6 +1,6 @@
 [package]
 name = "ssz_types"
-version = "0.6.0"
+version = "0.7.0"
 edition = "2021"
 description = "List, vector and bitfield types for SSZ"
 license = "Apache-2.0"
@@ -11,18 +11,17 @@ keywords = ["ethereum"]
 categories = ["cryptography::cryptocurrencies"]
 
 [dependencies]
-tree_hash = { path = "../tree_hash/tree_hash" }
-ethereum_ssz = "0.7"
-ethereum_serde_utils = "0.5.0"
+tree_hash = { git = "https://github.com/ncitron/tree_hash", branch = "stable-container" }
+ethereum_ssz = { git = "https://github.com/ncitron/ethereum_ssz", branch = "stable-container" }
+ethereum_serde_utils = "0.6.0"
 serde = "1.0.0"
 serde_derive = "1.0.0"
 typenum = "1.12.0"
 derivative = "2.1.1"
 smallvec = "1.8.0"
 arbitrary = { version = "1.0", features = ["derive"], optional = true }
-itertools = "0.10.0"
+itertools = "0.13.0"
 
 [dev-dependencies]
 serde_json = "1.0.0"
-tree_hash_derive = { path = "../tree_hash/tree_hash_derive" }
-
+tree_hash_derive = { git = "https://github.com/ncitron/tree_hash", branch = "stable-container" }
